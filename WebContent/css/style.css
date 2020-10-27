@@ -7,11 +7,16 @@
 	padding:0;
 	box-sizing:border-box;
 }
+html {
+    height: 100%
+}
 
 body{
     font-family: 'Nunito', sans-serif;
-    background: url('../assets/backg2.jpg');
-    width: 100% ;
+    background: url('../assets/backg2.jpg') ;
+    background-repeat: no-repeat;
+    background-size: 100% 105%;
+   
 }
 
 nav{
@@ -22,8 +27,8 @@ nav{
 }
 
 #logo{
-	height:50px;
-	width: 200px;
+	height:75px;
+	width: 100px;
 	
 }
 
@@ -31,13 +36,38 @@ nav ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 150px;
+    width: 370px;
     align-items: center; 
+}
+
+nav ul li{
+	width: 120px;
+    height: 35px;
+    background: black;
+    border-radius: 4px;
+    font-size: 17px;
+    padding-top: 7px;
+    text-align: center;   
+    font-weight: 600;
+   
+}
+
+nav ul li:hover{
+	color:black;
+	background:#FF3300;
 }
 
 nav ul a {
     text-decoration: none;
-    color: black;
+    color: white;
+    text-align: center;  
+}
+
+.heading{
+	 font-size: 30px;
+    font-weight: bold;
+    padding-top:15px;
+    padding-left:70px;
 }
 
 .login-illustration {
@@ -52,13 +82,14 @@ nav ul a {
     position: absolute;
     width: 386px;
     height: 28px;
-    left: 148px;
+    left: 200px;
     top: 212px;
     font-size: 36px;
+    font-weight: bold;
     line-height: 49px;
     display: flex;
     align-items: center;
-    color: black;
+    color: white;
 }
 
 .sub-text{
@@ -79,15 +110,16 @@ nav ul a {
 
     position: absolute;
     width: 440px;
-    height: 437px;
-    left: 850px;
-    top: 209px;
+    height: 520px;
+    left: 800px;
+    top: 150px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 1px 6px 9px rgba(0, 0, 0, 0.3);
 }
+
 
 .login-form form{
     display: flex;
@@ -119,6 +151,7 @@ nav ul a {
     border-radius: 4px;
     width: 372.07px;
     height: 42.92px;
+    padding:10px;
 }
 
 .button{
@@ -131,7 +164,7 @@ nav ul a {
     text-align: center;
     color: white;
     align-self: center;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
     cursor: pointer;
 

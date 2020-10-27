@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import businessLogic.ValidateAdmin;
 import dao.AdminDao;
 
 import model.Admin;
@@ -49,20 +50,21 @@ public class AdminLoginServlet extends HttpServlet {
 		admin.setEmail(email);
 		admin.setPassword(password);
 		
-		AdminDao admindao = new AdminDao();
+	
+		ValidateAdmin va = new ValidateAdmin();
 		
 		
 			boolean validateAdmin;
 			try {
-				validateAdmin = admindao.loginAdmin(admin);
+				validateAdmin = va.validate(admin);
 				if(validateAdmin) {
 					
-					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/adminCRUDView.jsp");
+					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("./WEB-INF/views/adminCRUDView.jsp");
 					rd.forward(request, response);
 				}
 				else {
 					request.setAttribute("message", "Login Unsuccessful");
-					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/adminLoginView.jsp");
+					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("./WEB-INF/views/adminLoginView.jsp");
 					rd.forward(request, response);
 				
 			}

@@ -10,6 +10,7 @@
 <body>
 	<nav>
 		 <img id="logo" src="./assets/logo.jpg" alt="logo"/>
+		  <div class="heading">GYM-MANAGEMENT</div>
 		 <ul>
 		 <li><a href="${pageContext.request.contextPath}/userlogin">User Login </a></li>
 		  <li><a href="${pageContext.request.contextPath}/adminlogin">Admin Login </a></li>
@@ -18,7 +19,7 @@
    </nav>
 		 
 		 <div class="welcome-back">WELCOME BACK :)</div>
-		 <div class="sub-text">Share something new that you have learnt today with the <br> CODE WALL community.</div>
+		 
 		 
 		 <div class="login-form"> 
 		 	<div class="title">USER LOGIN</div>

@@ -11,6 +11,7 @@
 <body>
 <nav>
 		 <img id="logo" src="./assets/logo.jpg" alt="logo"/>
+		  <div class="heading">GYM-MANAGEMENT</div>
 		 <ul>
 		 <li><a href="${pageContext.request.contextPath}/userlogin">User Login </a></li>
 		  <li><a href="${pageContext.request.contextPath}/adminlogin">Admin Login </a></li>
@@ -19,25 +20,24 @@
    </nav>
 <div class="body1">
 	
-	<div class="image">
-		<img src="./assests/gym.jpg" alt="logo" width="700px" height="700px"/>
-	</div>	
+		
 	<div class="user">
-		User_Subscription Form
+		
 	<div class="login-form">
+	<div class="title">MEMBER SUBSCRIPTION FORM</div>
 		<form action="${pageContext.request.contextPath }/UserSubsController" method="post">
 			
 			<input type="text" name="email" placeholder="EMAIL"id="email"><br>
 			
-			<input type="password" name="password" placeholder="PASSWORD" id="Passsword"><br>
+			<input type="password" name="password" placeholder="PASSWORD" id="password"><br>
 			<div class="password-hint">Must consist of atleast 8 characters, a symbol, an upper and a lowercase letter
             </div>
 			
-			<input type="subscription_price" name="subPrice"placeholder="SUBSCRIPTION PRICE" id="subscription_price"><br>
+			<input type="text" name="price" placeholder="SUBSCRIPTION PRICE" id="price"><br>
 		
-			<input type="subscribed_date" name="subscribed_date" id="subscribed_date">${subDate}<br>
+			<input type="text" name="subscribed_date" placeholder="${subDate}" id="subscribed_date"><br>
 		
-			<input type="subscribe_exp_date" name="expdate" placeholder="SUBSCRIBE EXP DATE" id="subscribe_exp_date"><br>
+			<input type="text" name="expdate" placeholder="SUBSCRIBE EXP DATE" id="expdate"><br>
 			${message}
 			<button class="button" type="submit">SUBSCRIBE</button>
 		</form>

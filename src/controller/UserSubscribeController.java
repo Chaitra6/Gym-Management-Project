@@ -1,7 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.sql.SQLException;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -56,8 +56,9 @@ public class UserSubscribeController extends HttpServlet {
 		LocalDate subdate = LocalDate.now();
 		System.out.println(subdate);
 
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate expdate = LocalDate.parse(request.getParameter("expdate"), formatter);
+		
 		System.out.println(expdate);
 		
 	

@@ -11,6 +11,7 @@
 <body >
 	<nav>
 		 <img id="logo" src="./assets/logo.jpg" alt="logo"/>
+		  <div class="heading">GYM-MANAGEMENT</div>
 		 <ul>
 		 <li><a href="${pageContext.request.contextPath}/adminCRUDView">BACK</a></li>
 		 <li><a href="${pageContext.request.contextPath}/userlogin">User Login </a></li>
